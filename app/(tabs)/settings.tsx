@@ -25,14 +25,14 @@ const styles = StyleSheet.create({
 
 
 
-export default function menu(){
+export default function settings(){
   return(
     <View  style={{flex: 1, backgroundColor: 'white',  flexDirection: "column"}} >
      <View style={styles.sectionHeader}  className='flex-between'>
 
             <View>
             <Text className='' style={{fontWeight: 500, fontSize: 24, padding: 10}}>
-                Bonjour <Text className='text-green-100'>Ando</Text>
+                Setting <span className='text-green-100'>Page</span>
             </Text>
             </View>
             <View className='border rounded-full bg-red-500 h-50' style={{width: 50, height: 50}}></View>
