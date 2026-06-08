@@ -28,17 +28,7 @@ const styles = StyleSheet.create({
 export default function settings(){
   return(
     <View  style={{flex: 1, backgroundColor: 'white',  flexDirection: "column"}} >
-     <View style={styles.sectionHeader}  className='flex-between'>
-
-            <View>
-            <Text className='' style={{fontWeight: 500, fontSize: 24, padding: 10}}>
-                Setting <span className='text-green-100'>Page</span>
-            </Text>
-            </View>
-            <View className='border rounded-full bg-red-500 h-50' style={{width: 50, height: 50}}></View>
-     </View>
-     <View style={{flex: 3, backgroundColor: '', width: '50%'}}/>
-     <View style={{flex: 2, backgroundColor: 'green', width: '50%'}}/>
+     
     </View>
   )
 }
