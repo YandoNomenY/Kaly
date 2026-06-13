@@ -44,7 +44,7 @@ export default function Layout() {
         headerTitleStyle: { fontWeight: 'bold' },
       }}
     >
-          <Stack.Screen name="index" options={{ headerShown: false }} />
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         </Stack>
     </ThemeProvider>
   );

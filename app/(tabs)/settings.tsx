@@ -1,6 +1,7 @@
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { Pressable, ScrollView, Text, View, Image, StyleSheet, SectionList } from 'react-native';
+import ScreenWrapper from '../components/ScreenWrapper';
 
 const styles = StyleSheet.create({
   container: {
@@ -27,9 +28,11 @@ const styles = StyleSheet.create({
 
 export default function settings(){
   return(
-    <View  style={{flex: 1, backgroundColor: 'white',  flexDirection: "column"}} >
-     
-    </View>
+    <ScreenWrapper backgroundColor='#f3f4f6'>
+          <View  style={{flex: 1, backgroundColor: 'white',  flexDirection: "column"}} >
+    
+          </View>
+    </ScreenWrapper>
   )
 }
 

@@ -4,6 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import Fontisto from '@expo/vector-icons/Fontisto';
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function TabsLayout() {
     return(
@@ -12,10 +13,20 @@ export default function TabsLayout() {
             tabBarActiveTintColor: '#31511E',
             tabBarInactiveTintColor: '#000000',
 
+            // Nom de l'application
+            headerTitle: 'Kaly',
+            headerTintColor: 'white',
+            headerShown: true,
+            headerStyle: {
+               
+                backgroundColor: '#31511E',
+                
+            },
+
             // 2. Styles de la barre de navigation
             tabBarStyle: {
              position: 'absolute',
-             bottom: Platform.OS === 'ios' ? 30 : 2, // ajustement seulement l'OS
+             bottom: Platform.OS === 'ios' ? 30 : 0, // ajustement selon l'OS
              left: 20,  
              right: 20,
              height: 100,
@@ -49,10 +60,11 @@ export default function TabsLayout() {
         }} 
         
         >
+            
             <Tabs.Screen
-                name="index"
+                name="home"
                 options={{ 
-                    title: 'Acceuil', headerShown: false,
+                    tabBarLabel: 'Acceuil',
                     tabBarIcon: ({ color, focused}) => (
                         <Ionicons name={focused ? 'home' : 'home-outline'} size={24} color={color} />
                     )
@@ -61,7 +73,8 @@ export default function TabsLayout() {
             <Tabs.Screen 
                 name="aliments"
                 options={{ 
-                    title: 'Aliments',
+                    headerTitle: 'Aliments',
+                    
                     tabBarIcon: ({ color, focused }) => (
                         <FontAwesome6 name="bowl-food" size={24} color={color} />
                     )
@@ -70,7 +83,7 @@ export default function TabsLayout() {
             <Tabs.Screen
                 name="regimes"
                 options={{ 
-                    title: 'Régimes',
+                    headerTitle: 'Régimes',
                     tabBarIcon: ({ color, focused }) => (
                         <AntDesign name={'hdd'} size={24} color={color} />
                     )
@@ -79,7 +92,7 @@ export default function TabsLayout() {
             <Tabs.Screen
                 name="settings"
                 options={{ 
-                    title: 'Paramètres',
+                    headerTitle: 'Paramètres',
                     tabBarIcon: ({ color, focused }) => (
                         focused ? <Fontisto name="player-settings" size={24} color={color} /> : <AntDesign name={'setting'} size={24} color="black" /> 
                     )

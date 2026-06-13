@@ -1,7 +1,18 @@
 import { useRouter } from "expo-router";
+import { useEffect } from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 export default function WelcomeScreen(){
     const router = useRouter();
+    useEffect(() => {
+        // Simulation du temps de rechargement
+        const timer = setTimeout(() => {
+            // Redirection automatique vers home
+            router.replace('/home');
+        }, 3000);
+    
+        // Nettoyage du timer si le composant est démonté avant la redirection
+        return () => clearTimeout(timer);
+    }, [])
     return (
         <View style={styles.container} >
             {/*  Logo de l'application  */}
@@ -11,7 +22,7 @@ export default function WelcomeScreen(){
 
             {/*  Nom de l'application  */}
             <Text style={styles.title}>Kaly</Text>
-            <Text style={styles.subtitle}>Kalinao, Kajinao</Text>
+            <Text style={styles.subtitle}>Kalinao, sakafo voakajy !</Text>
 
 
         </View>
